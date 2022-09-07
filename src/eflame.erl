@@ -1,5 +1,8 @@
 -module(eflame).
 -export([apply/2,
+         stop_trace/2,
+         spawn_tracer/0,
+         start_trace/3,
          apply/3,
          apply/4,
          apply/5]).

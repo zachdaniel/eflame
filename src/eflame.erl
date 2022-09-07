@@ -52,7 +52,6 @@ stop_trace(Tracer, Target) ->
     Tracer ! {dump_bytes, self()},
 
     Ret = receive {bytes, B} -> {ok, B}
-    after 5000 -> {error, timeout}
     end,
 
     exit(Tracer, normal),
